@@ -49506,6 +49506,20 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('graph', require('./components/Graph.vue').default);
 
+Vue.component('message', {
+  props: ['title', 'body'],
+  data: function data() {
+    return {
+      isVisible: true
+    };
+  },
+  template: "\n      <article class=\"message\" v-show=\"isVisible\">\n        <div class=\"message-header\">\n          <p>{{ title }}</p>\n          <button @click=\"hideMessage\" class=\"delete\" aria-label=\"delete\"></button>\n        </div>\n\n        <div class=\"message-body\">\n          {{ body }}\n        </div>\n      </article>\n      ",
+  methods: {
+    hideMessage: function hideMessage() {
+      this.isVisible = false;
+    }
+  }
+});
 Vue.component('task-list', {
   template: "\n    <div>\n      <task v-for=\"task in tasks\">{{ task.description }}</task>\n    </div>\n  ",
   data: function data() {
@@ -49541,6 +49555,9 @@ Vue.component('task', {
 });
 new Vue({
   el: '#task-demo'
+});
+new Vue({
+  el: '#message-ex'
 });
 /**
  * Next, we will create a fresh Vue application instance and attach it to

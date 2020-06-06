@@ -2,8 +2,17 @@
 <html>
     <head>
         <title>Laravel</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
     </head>
     <body>
+
+      <div id="message-ex" class="container">
+
+        <message title="Hello World" body="Lorem ipsum dolor sit amet, mollit anim id est laborum."></message>
+        <message title="Hello Laura" body="Lorem ipsum dolor sit amet, mollit anim id est laborum."></message>
+
+      </div>
 
       <div id="task-demo">
         <h1>Hello Vue component</h1>

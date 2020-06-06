@@ -27,6 +27,39 @@ window.Vue = require('vue');
 
 // Vue.component('graph', require('./components/Graph.vue').default);
 
+Vue.component('message', {
+
+  props: ['title', 'body'],
+
+  data() {
+    return {
+      isVisible: true
+    };
+  },
+  
+  template: `
+      <article class="message" v-show="isVisible">
+        <div class="message-header">
+          <p>{{ title }}</p>
+          <button @click="hideMessage" class="delete" aria-label="delete"></button>
+        </div>
+
+        <div class="message-body">
+          {{ body }}
+        </div>
+      </article>
+      `,
+
+      methods: {
+        hideMessage() {
+
+          this.isVisible = false;
+
+        }
+      }
+});
+
+
 Vue.component('task-list', {
   template: `
     <div>
@@ -60,6 +93,11 @@ Vue.component('task', {
 
 new Vue({
   el: '#task-demo',
+
+});
+
+new Vue({
+  el: '#message-ex',
 
 });
 
