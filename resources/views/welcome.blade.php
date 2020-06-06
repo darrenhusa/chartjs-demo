@@ -4,9 +4,15 @@
         <title>Laravel</title>
     </head>
     <body>
-        <h1>Hello Vue</h1>
+
+        <div id="root">
+          <h1>Hello Chart.js</h1>
+          
+          <graph></graph>
+        </div>
 
         <div id="hello">
+          <h1>Hello Vue</h1>
           <ul>
             <li v-for="name in names" v-text="name"></li>
             {{-- <li v-for="name in names">@{{ name }}</li> --}}

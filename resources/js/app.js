@@ -3,6 +3,8 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+
+require('./components/Graph');
 // import Graph from './components/Graph';
 
 
@@ -39,4 +41,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#root',
 
+    components: { Graph }
 });
