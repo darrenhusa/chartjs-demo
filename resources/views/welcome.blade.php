@@ -7,22 +7,45 @@
         <h1>Hello Vue</h1>
 
         <div id="hello">
-          <input type="text" name="input" v-model="message">
+          <ul>
+            <li v-for="name in names" v-text="name"></li>
+            {{-- <li v-for="name in names">@{{ name }}</li> --}}
+          </ul>
 
-          <p>The value of the input is @{{ message }}.</p>
+          <input type="text" v-model="newName">
+
+          <button @click="addName">Add Name</button>
+          {{-- <button v-on:click="addName">Add Name</button> --}}
+
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <script>
 
-      new Vue({
+      var app = new Vue({
         el: "#hello",
 
         data: {
-          message: 'Hello World',
+          newName: '',
 
-        }
+          names: ['Joe', 'Mary', 'Jane', 'Jack'],
+
+        },
+
+        methods: {
+
+          addName() {
+            // alert("adding name");
+            this.names.push(this.newName);
+            this.newName = '';
+          }
+        },
+
+        // mounted(): {
+        //
+        // }
+
       });
 
     </script>
