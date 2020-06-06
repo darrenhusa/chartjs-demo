@@ -27,6 +27,39 @@ window.Vue = require('vue');
 
 // Vue.component('graph', require('./components/Graph.vue').default);
 
+Vue.component('modal', {
+
+  // props: ['title', 'body'],
+
+  // data() {
+  //   return {
+  //     showModal: false
+  //   };
+  // },
+
+  template: `
+      <div class="modal is-active">
+        <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="box">
+                <slot></slot>
+            </div>
+          </div>
+          <button class="modal-close is-large" aria-label="close" @click="$emit('close')"></button>
+        </div>
+      `,
+
+      // methods: {
+      //   hideModal() {
+      //
+      //     this.isVisible = false;
+      //
+      //   }
+      // }
+});
+
+
+
 Vue.component('message', {
 
   props: ['title', 'body'],
@@ -36,7 +69,7 @@ Vue.component('message', {
       isVisible: true
     };
   },
-  
+
   template: `
       <article class="message" v-show="isVisible">
         <div class="message-header">
@@ -123,6 +156,14 @@ new Vue({
 // Vue.component('task', {
 //   template: '<li>FooBar</li>'
 // });
+
+const app = new Vue({
+    el: '#root',
+
+    data: {
+      showModal: false
+    }
+});
 
 new Vue({
     el: "#hello",

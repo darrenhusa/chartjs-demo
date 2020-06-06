@@ -49506,6 +49506,22 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('graph', require('./components/Graph.vue').default);
 
+Vue.component('modal', {
+  // props: ['title', 'body'],
+  // data() {
+  //   return {
+  //     showModal: false
+  //   };
+  // },
+  template: "\n      <div class=\"modal is-active\">\n        <div class=\"modal-background\"></div>\n          <div class=\"modal-content\">\n            <div class=\"box\">\n                <slot></slot>\n            </div>\n          </div>\n          <button class=\"modal-close is-large\" aria-label=\"close\" @click=\"$emit('close')\"></button>\n        </div>\n      " // methods: {
+  //   hideModal() {
+  //
+  //     this.isVisible = false;
+  //
+  //   }
+  // }
+
+});
 Vue.component('message', {
   props: ['title', 'body'],
   data: function data() {
@@ -49578,6 +49594,12 @@ new Vue({
 //   template: '<li>FooBar</li>'
 // });
 
+var app = new Vue({
+  el: '#root',
+  data: {
+    showModal: false
+  }
+});
 new Vue({
   el: "#hello",
   data: {

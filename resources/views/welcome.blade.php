@@ -7,6 +7,15 @@
     </head>
     <body>
 
+      <div class="container" id="root">
+        <modal v-if="showModal" @close="showModal = false">
+          <p>We insert any text here.</p>
+        </modal>
+
+        <button @click="showModal = true">Show Modal</button>
+      </div>
+
+
       <div id="message-ex" class="container">
 
         <message title="Hello World" body="Lorem ipsum dolor sit amet, mollit anim id est laborum."></message>
