@@ -49506,6 +49506,32 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('graph', require('./components/Graph.vue').default);
 
+Vue.component('task-list', {
+  template: "\n    <div>\n      <task v-for=\"task in tasks\">{{ task.description }}</task>\n    </div>\n  ",
+  data: function data() {
+    return {
+      tasks: [{
+        description: 'Go to Best Buy',
+        complete: false
+      }, {
+        description: 'Go to the store',
+        complete: true
+      }, {
+        description: 'Go to the mall',
+        complete: false
+      }, {
+        description: 'Go to the farm',
+        complete: true
+      }, {
+        description: 'Go to work',
+        complete: false
+      }]
+    };
+  }
+});
+new Vue({
+  el: '#task-demo'
+});
 Vue.component('task', {
   template: '<li><slot></slot></li>'
 });

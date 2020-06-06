@@ -8,9 +8,10 @@
       <div id="task-demo">
         <h1>Hello Vue component</h1>
 
-        <task>Go to the bank</task>
+        <task-list></task-list>
+        {{-- <task>Go to the bank</task>
         <task>Go to the store</task>
-        <task>Go to work</task>
+        <task>Go to work</task> --}}
 
       </div>
 
