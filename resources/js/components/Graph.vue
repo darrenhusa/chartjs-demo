@@ -23,7 +23,7 @@ export default {
 
     <!-- options: {}, -->
 
-    ready() {
+    mounted() {
       var context = document.getElementById('graph').getContext('2d');
 
       var myChart = new Chart(context, {
@@ -44,7 +44,7 @@ export default {
             }
           ]
         },
-        
+
         options: {},
       });
 

@@ -5,9 +5,18 @@
     </head>
     <body>
 
+      <div id="task-demo">
+        <h1>Hello Vue component</h1>
+
+        <task>Go to the bank</task>
+        <task>Go to the store</task>
+        <task>Go to work</task>
+
+      </div>
+
         <div id="root">
           <h1>Hello Chart.js</h1>
-          
+
           <graph></graph>
         </div>
 
@@ -27,33 +36,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    <script>
-
-      var app = new Vue({
-        el: "#hello",
-
-        data: {
-          newName: '',
-
-          names: ['Joe', 'Mary', 'Jane', 'Jack'],
-
-        },
-
-        methods: {
-
-          addName() {
-            // alert("adding name");
-            this.names.push(this.newName);
-            this.newName = '';
-          }
-        },
-
-        // mounted(): {
-        //
-        // }
-
-      });
-
-    </script>
+        <script src="/js/app.js"></script>
     </body>
 </html>

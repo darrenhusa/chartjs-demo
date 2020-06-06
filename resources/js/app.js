@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./components/Graph');
+// require('./components/Graph');
 // import Graph from './components/Graph';
 
 
@@ -23,7 +23,18 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+// Vue.component('graph', require('./components/Graph.vue').default);
+
+Vue.component('task', {
+  template: '<li><slot></slot></li>'
+});
+
+new Vue({
+  el: '#task-demo',
+
+});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -38,8 +49,37 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  // });
 
 
-const app = new Vue({
-    el: '#root',
+// const app = new Vue({
+//     el: '#root',
+//
+//     // components: { Graph }
+// });
 
-    components: { Graph }
-});
+// Vue.component('task', {
+//   template: '<li>FooBar</li>'
+// });
+
+new Vue({
+    el: "#hello",
+
+    data: {
+      newName: '',
+
+      names: ['Joe', 'Mary', 'Jane', 'Jack'],
+
+    },
+
+    methods: {
+
+      addName() {
+        // alert("adding name");
+        this.names.push(this.newName);
+        this.newName = '';
+      }
+    },
+
+    // mounted(): {
+    //
+    // }
+
+  });

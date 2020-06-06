@@ -1,9 +1,13 @@
-// import Vue from 'vue';
-// import Graph from './components/Graph';
-//
+Vue.component('task', {
+  template: '<li>FooBar</li>'
+});
+
+new Vue({
+  el: '#task-demo',
+
+});
 
 // new Vue({
-//     el: 'app',
+//     el: '#root',
 //
-//     components: { Graph }
 // });
