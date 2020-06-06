@@ -8,6 +8,8 @@
 
         <div id="hello">
           <input type="text" name="input" v-model="message">
+
+          <p>The value of the input is @{{ message }}.</p>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
