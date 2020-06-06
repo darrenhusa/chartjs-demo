@@ -3,6 +3,8 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+// import Graph from './components/Graph';
+
 
 require('./bootstrap');
 
@@ -27,6 +29,14 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+ // const app = new Vue({
+ //     el: '#app',
+ //
+ //     components: { Graph }
+ // });
+
+
 const app = new Vue({
-    el: '#app',
+    el: '#root',
+
 });

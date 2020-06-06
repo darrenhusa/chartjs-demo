@@ -1,35 +1,36 @@
 import Chart from 'chart.js';
 
+
 export default {
     template: '<canvas width="600" height="400"></canvas>',
 
-    props: {
-        labels: {},
-        values: {},
-        color: {
-            default: 'rgba(220,220,220,0.2)'
+    data: {
+      labels: ['January', 'Febuary', 'March'],
+
+      datasets: [
+        {
+          label: 'revenue',
+          // backgroundColor: 'blue',
+          backgroundColor: 'rgb(200, 220, 220, 0.2)',
+          // borderColor: 'red',
+          borderColor: 'rgb(220, 220, 220, 0.2)',
+          // borderWidth: 1,
+
+          data: [30, 122, 90]
         }
+      ]
     },
 
+    options: {},
+
     ready() {
-        var data = {
-          labels: this.labels,
+      var context = document.getElementById('graph').getContext('2d');
 
-          datasets: [
-            {
-              fillColor: this.color,
-              strokeColor: "rgba(220,220,220,1)",
-              pointColor: "rgba(220,220,220,1)",
-              pointStrokeColor: "#fff",
-              pointHighlightFill: "#fff",
-              pointHighlightStroke: "rgba(220,220,220,1)",
-              data: this.values
-            },
-          ]
-        };
+      var myChart = new Chart(context, {
+        type: 'line',
+        data: data,
+        options: options,
+      });
 
-        new Chart(
-            this.$el.getContext('2d')
-        ).Line(data);
     }
 }

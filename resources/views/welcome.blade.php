@@ -4,11 +4,25 @@
         <title>Laravel</title>
     </head>
     <body>
-        <h1>Hello Chart.js</h1>
-        <canvas height="300" width="200" id="graph"></canvas>
+        <h1>Hello Vue</h1>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="js/pubMain.js"></script>
+        <div id="hello">
+          <input type="text" name="input" v-model="message">
+        </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+
+      new Vue({
+        el: "#hello",
+
+        data: {
+          message: 'Hello World',
+
+        }
+      });
+
+    </script>
     </body>
 </html>
