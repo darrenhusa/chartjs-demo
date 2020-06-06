@@ -49517,21 +49517,25 @@ Vue.component('task-list', {
         description: 'Go to the store',
         complete: true
       }, {
-        description: 'Go to the mall',
+        description: 'Go to work',
         complete: false
       }, {
-        description: 'Go to the farm',
+        description: 'Go to the bank',
         complete: true
       }, {
-        description: 'Go to work',
+        description: 'Go to Walgreens',
+        complete: true
+      }, {
+        description: 'Go to Strack & Van Tils',
         complete: false
       }]
     };
   }
-});
-new Vue({
-  el: '#task-demo'
-});
+}); // new Vue({
+//   el: '#task-demo',
+//
+// });
+
 Vue.component('task', {
   template: '<li><slot></slot></li>'
 });

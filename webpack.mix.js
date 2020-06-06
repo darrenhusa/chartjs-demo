@@ -11,6 +11,9 @@ const mix = require('laravel-mix');
  |
  */
  mix.js('resources/js/app.js', 'public/js');
+    // .browserSync('chartjs-demo.test');
+
+
  // mix.js('resources/js/main.js', 'public/js');
 
 // mix.browserSync('chartjs-demo.test');
