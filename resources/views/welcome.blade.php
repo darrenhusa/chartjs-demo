@@ -8,6 +8,23 @@
     <body>
 
       <div class="container" id="root">
+        <tabs>
+          <tab name="About Us" :selected="true">
+            <h1>Here is the content for the about us tab.</h1>
+          </tab>
+
+          <tab name="About Our Culture">
+            <h1>Here is the content for the about our culture tab.</h1>
+          </tab>
+
+          <tab name="About Our Vision">
+            <h1>Here is the content for the about our vision tab.</h1>
+          </tab>
+
+        </tabs>
+      </div>
+
+      <div class="container" id="modal-ex">
         <modal v-if="showModal" @close="showModal = false">
           <p>We insert any text here.</p>
         </modal>
